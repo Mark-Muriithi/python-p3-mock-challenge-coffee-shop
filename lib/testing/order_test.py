@@ -51,26 +51,26 @@ class TestOrders:
         #     order_1.price = 3.0
 
     def test_has_a_customer(self):
-        '''order has a customer .'''
+        """order has a customer ."""
         coffee = Coffee("Mocha")
         customer_1 = Customer('Wayne')
         customer_2 = Customer('Dima')
         order_1 = Order(customer_1, coffee, 2.0)
         order_2 = Order(customer_2, coffee, 5.0)
 
-        assert (order_1.customer == customer_1)
-        assert (order_2.customer == customer_2)
+        assert order_1.customer == customer_1
+        assert order_2.customer == customer_2
 
     def test_customer_of_type_customer(self):
-        '''customer is of type Customer'''
+        """customer is of type Customer"""
         coffee = Coffee("Vanilla Latte")
         customer_1 = Customer('Wayne')
         customer_2 = Customer('Dima')
         order_1 = Order(customer_1, coffee, 2.0)
         order_2 = Order(customer_2, coffee, 5.0)
 
-        assert (isinstance(order_1.customer, Customer))
-        assert (isinstance(order_2.customer, Customer))
+        assert isinstance(order_1.customer, Customer)
+        assert isinstance(order_2.customer, Customer)
 
     def test_has_a_coffee(self):
         '''order has a coffee.'''
@@ -80,8 +80,8 @@ class TestOrders:
         order_1 = Order(customer, coffee_1, 2.0)
         order_2 = Order(customer, coffee_2, 5.0)
 
-        assert (order_1.coffee == coffee_1)
-        assert (order_2.coffee == coffee_2)
+        assert order_1.coffee == coffee_1
+        assert order_2.coffee == coffee_2
 
     def test_coffee_of_type_coffee(self):
         '''coffee is of type Coffee'''
@@ -91,8 +91,8 @@ class TestOrders:
         order_1 = Order(customer, coffee_1, 2.0)
         order_2 = Order(customer, coffee_2, 5.0)
 
-        assert (isinstance(order_1.coffee, Coffee))
-        assert (isinstance(order_2.coffee, Coffee))
+        assert isinstance(order_1.coffee, Coffee)
+        assert isinstance(order_2.coffee, Coffee)
 
     def test_get_all_orders(self):
         '''Order class all attribute'''
